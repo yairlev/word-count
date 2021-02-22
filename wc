@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [ $1 == "server" ]; then
+    if [ $2 == "start" ]; then
+        python src/server/index.py &
+    else
+        pkill -f src/server/index.py
+    fi
+else
+    python src/client/index.py "$@"
+fi
