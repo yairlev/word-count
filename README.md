@@ -31,6 +31,7 @@ Server - receives text (files, strings, urls), parses them and stores the stats 
 You can set the following environment variables in .env file
 
 `SERVER_HOST` - The host to the server. Default value is `localhost`
+
 `SERVER_PORT` - Port to server. Default port is `8080` 
 
 
