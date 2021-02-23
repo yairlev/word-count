@@ -69,6 +69,7 @@ No params
 ### Response:
 
 Success - 200 with a json string containing words as keys and counts as values 
+
 Fail - 500 with error string
 
 
