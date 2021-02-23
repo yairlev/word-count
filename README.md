@@ -35,6 +35,41 @@ You can set the following environment variables in .env file
 `SERVER_PORT` - Port to server. Default port is `8080` 
 
 
+## Server HTTP APIs
+
+```
+/upload (POST)
+```
+Send a file, string or URL
+
+### Params:
+
+| Name        | Value          | Notes
+| ------------- |:-------------:|:-----------------:|
+|  `"action"`   |  `"file"`,`"str"`, `"url"` |
+|  `"file"` |  file blob | (optional) send if `action` is `file`
+|  `"str"`  |  text | (optional) send if `action` is `str`
+|  `"url"`  |  URL pointing to a text file | (optional) send if `action` is `url`
+
+### Response
+
+Success - 200 with an "Ok" strings
+
+Fail - 500 with an error string
+
+```
+/stats (GET)
+```
+Get word count stats
+
+### Params:
+
+No params
+
+### Response:
+
+Success - 200 with a json string containing words as keys and counts as values 
+Fail - 500 with error string
 
 
 
